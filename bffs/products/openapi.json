@@ -1,0 +1,236 @@
+{
+  "openapi": "3.0.0",
+  "info": {
+    "title": "Products BFF",
+    "version": "1.0.0",
+    "description": "Energy-efficient products, with Inflation Reduction Act discounts and rebates information.",
+    "contact": {
+      "name": "Colin Young",
+      "url": "https://github.com/colinyoung",
+      "email": "me@colinyoung.com"
+    }
+  },
+  "servers": [
+    {
+      "url": "http://localhost:3000"
+    }
+  ],
+  "tags": [
+    { "name": "products", "description": "Products operations" },
+    { "name": "categories", "description": "Categories operations" },
+    { "name": "discounts", "description": "Discounts operations" },
+    { "name": "bff", "description": "BFF operations" }
+  ],
+  "paths": {
+    "/bff": {
+      "get": {
+        "summary": "Get products for UI format",
+        "operationId": "getBFF",
+        "description": "Products with all fields included",
+        "tags": ["bff"],
+        "responses": {
+          "200": {
+            "description": "Products were obtained",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/UIProduct"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/products": {
+      "get": {
+        "summary": "Get products",
+        "operationId": "getProducts",
+        "description": "Products were obtained",
+        "tags": ["products"],
+        "responses": {
+          "200": {
+            "description": "Products were obtained",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Product"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/categories": {
+      "get": {
+        "summary": "Get categories",
+        "description": "Get categories",
+        "operationId": "getCategories",
+        "tags": ["categories"],
+        "responses": {
+          "200": {
+            "description": "Categories were obtained",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "array",
+                  "items": {
+                    "$ref": "#/components/schemas/Category"
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    },
+    "/discounts": {
+      "get": {
+        "summary": "Get discounts",
+        "operationId": "getDiscounts",
+        "description": "List discounts, organized into instantRebates and taxCredits",
+        "tags": ["discounts"],
+        "responses": {
+          "200": {
+            "description": "Discounts were obtained",
+            "content": {
+              "application/json": {
+                "schema": {
+                  "type": "object",
+                  "properties": {
+                    "upfrontRebates": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/UpfrontRebate"
+                      }
+                    },
+                    "taxCredits": {
+                      "type": "array",
+                      "items": {
+                        "$ref": "#/components/schemas/TaxCredit"
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components": {
+    "schemas": {
+      "Product": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "price": {
+            "type": "number"
+          },
+          "image": {
+            "type": "string"
+          }
+        }
+      },
+      "Category": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+
+          "name": {
+            "type": "string"
+          },
+          "description": {
+            "type": "string"
+          }
+        }
+      },
+      "UpfrontRebate": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "categoryId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "amount": {
+            "type": "number"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Category"
+            }
+          }
+        }
+      },
+      "TaxCredit": {
+        "type": "object",
+        "properties": {
+          "id": {
+            "type": "integer"
+          },
+          "categoryId": {
+            "type": "integer"
+          },
+          "name": {
+            "type": "string"
+          },
+          "percentage": {
+            "type": "number"
+          },
+          "categories": {
+            "type": "array",
+            "items": {
+              "$ref": "#/components/schemas/Category"
+            }
+          }
+        }
+      },
+      "UIProduct": {
+        "type": "object",
+        "allOf": [
+          {
+            "$ref": "#/components/schemas/Product"
+          },
+          {
+            "type": "object",
+            "properties": {
+              "rebates": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/UpfrontRebate"
+                }
+              },
+              "credits": {
+                "type": "array",
+                "items": {
+                  "$ref": "#/components/schemas/TaxCredit"
+                }
+              }
+            }
+          }
+        ]
+      }
+    }
+  }
+}

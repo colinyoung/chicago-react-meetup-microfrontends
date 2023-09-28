@@ -1,0 +1,21 @@
+{
+  "name": "products-bff",
+  "version": "1.0.0",
+  "description": "A backend-for-frontend for the products MFE.",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node index.mjs",
+    "dev": "nodemon index.mjs",
+    "test": "jest ."
+  },
+  "author": "Colin Young",
+  "license": "MIT",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.2"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
