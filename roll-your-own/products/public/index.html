@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik:400,700"
+    />
+  </head>
+  <body>
+    <div class="border">
+      <div id="microfrontend-products"></div>
+    </div>
+
+    <script type="importmap">
+      {
+        "imports": {
+          "products": "./ProductsExperience.js"
+        }
+      }
+    </script>
+    <!-- There are polyfills for this stuff -->
+    <script type="module">
+      import { ProductsExperience } from "products";
+
+      const sampleJWT = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlJlYWN0IE1lZXR1cCEiLCJpYXQiOjE1MTYyMzkwMjJ9.ySWrOPI9ciFrY9BEaXxuRG3ajqQajr6bUSO4MUjm5Gk";
+
+      ProductsExperience.hydrate(
+        document.getElementById("microfrontend-products"),
+        { jwt: sampleJWT }
+      );
+    </script>
+    <!-- TODO: Of course, styles would and should come from the JS bundle. -->
+    <link rel="stylesheet" href="./ProductsExperience.css" />
+  </body>
+</html>

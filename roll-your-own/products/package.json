@@ -1,0 +1,39 @@
+{
+  "name": "products",
+  "version": "1.0.0",
+  "description": "Easily embed energy-efficient products into your website.",
+  "scripts": {
+    "start": "npm run dev",
+    "serve": "serve dist/",
+    "test": "jest .",
+    "dev": "NODE_ENV=development && concurrently \"esbuild src/*.{ts,tsx} --bundle --sourcemap --servedir=dist --outdir=dist/ --format=esm --platform=browser --watch\" \"sass --watch src/:dist/\" \"npm-watch copy-html\" \"open http://localhost:8002\"",
+    "copy-html": "cp public/*.html dist/",
+    "build-types": "openapi-typescript ../../bffs/products/openapi.json -o src/support/openapi.d.ts"
+  },
+  "author": "Colin Young",
+  "license": "MIT",
+  "dependencies": {
+    "@types/react": "^18.2.23",
+    "@types/react-dom": "^18.2.7",
+    "fetch-suspense": "^1.2.2",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-error-boundary": "^4.0.11"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.1",
+    "esbuild": "^0.19.3",
+    "jest": "^29.7.0",
+    "npm-watch": "^0.11.0",
+    "openapi-typescript": "^6.7.0",
+    "sass": "^1.68.0",
+    "serve": "^14.2.1"
+  },
+  "overrides": {
+    "nodemon": "3.0.1"
+  },
+  "watch": {
+    "copy-html": "public/index.html",
+    "build-types": "bff/openapi.json"
+  }
+}

@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Merriweather:400,700"
+    />
+    <title>Inflation Reduction Act of 2022</title>
+    <style>
+      body {
+        font-family: Merriweather, Georgia, 'Times New Roman', Times, serif;
+        margin: 20px;
+      }
+      article {
+        max-width: 60rem;
+        margin: 0 auto;
+      }
+      h1 {
+        text-align: left;
+      }
+      h2 {
+        font-size: 1.2em;
+        margin-top: 20px;
+      }
+      p {
+        line-height: 1.4;
+        margin-top: 10px;
+      }
+    </style>
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css?family=Rubik:400,700"
+    />
+  </head>
+  <body>
+    <article>
+      <h1>
+        Inflation Reduction Act of 2022: Boosting Energy Efficiency with
+        Discounts and Rebates
+      </h1>
+      <h2>Homeowners and renters alike may qualify for deep discounts</h2>
+      <!-- Titlecase above -->
+
+      <p><em>September 26, 2023</em></p>
+
+      <p><strong>Introduction</strong></p>
+      <p>
+        In an effort to combat rising energy costs and promote sustainable
+        living, the United States Congress passed the Inflation Reduction Act of
+        2022. This groundbreaking legislation introduces a range of discounts
+        and rebates aimed at encouraging consumers to invest in energy-efficient
+        products, including heat pumps and induction cooktops. By doing so,
+        lawmakers hope to reduce energy consumption, lower greenhouse gas
+        emissions, and alleviate the financial burden on households facing
+        inflationary pressures.
+      </p>
+
+      <p><strong>The Key Provisions</strong></p>
+      <ol>
+        <li>
+          <strong>Heat Pumps:</strong> One of the central pillars of the
+          Inflation Reduction Act is the promotion of heat pump adoption. Heat
+          pumps are highly energy-efficient systems for both heating and
+          cooling, making them a viable option for reducing energy bills. Under
+          the new legislation, consumers are eligible for substantial rebates
+          when they install or upgrade to energy-efficient heat pumps in their
+          homes.
+        </li>
+        <li>
+          <strong>Induction Cooktops:</strong> Another area of focus in the Act
+          is induction cooktops. These appliances are known for their precision
+          and energy efficiency compared to traditional gas or electric stoves.
+          To incentivize the switch to induction cooking, consumers can now
+          enjoy discounts when purchasing induction cooktops.
+        </li>
+      </ol>
+
+      <p><strong>Environmental Impact</strong></p>
+      <p>
+        The Inflation Reduction Act of 2022 is not only about reducing the
+        financial strain on households but also about addressing environmental
+        concerns. By encouraging the adoption of energy-efficient technologies,
+        the legislation contributes to the reduction of carbon emissions, which
+        is crucial in the fight against climate change.
+      </p>
+
+      <p><strong>Discounts You Could Receive</strong></p>
+
+      <p>
+        Our partner has compiled a list of common products and the discounts you
+        could expect to receive using the IRA's benefits.
+      </p>
+
+      <div id="microfrontend-products"></div>
+
+      <p><strong>Consumer Benefits</strong></p>
+      <p>
+        Apart from the environmental benefits, the Act brings direct financial
+        relief to consumers. Lower energy bills, combined with discounts and
+        rebates, empower individuals and families to make sustainable choices
+        without compromising their budgets. This, in turn, promotes a higher
+        quality of life and reduced economic inequality.
+      </p>
+
+      <p><strong>Implementation and Eligibility</strong></p>
+      <p>
+        Details regarding the implementation of the Act, including eligibility
+        criteria and the application process for discounts and rebates, can be
+        found on the official government website dedicated to the Inflation
+        Reduction Act of 2022.
+      </p>
+
+      <p><strong>Conclusion</strong></p>
+      <p>
+        The Inflation Reduction Act of 2022 marks a significant step toward a
+        more sustainable and economically viable future for American households.
+        By offering incentives for the adoption of energy-efficient technologies
+        like heat pumps and induction cooktops, the legislation not only eases
+        the financial burden but also promotes responsible and environmentally
+        friendly choices. As the nation faces the challenges of inflation and
+        climate change, this Act stands as a beacon of hope for a brighter and
+        more sustainable future.
+      </p>
+    </article>
+
+    <!-- todo: Styles injected as part of bundle -->
+    <link rel="stylesheet" href="//localhost:8002/ProductsExperience.css" />
+
+    <script type="importmap">
+      {
+        "imports": {
+          "products": "//localhost:8002/ProductsExperience.js"
+        }
+      }
+    </script>
+    <!-- There are polyfills for this stuff -->
+    <script type="module">
+      import { ProductsExperience } from "products";
+
+      const sampleJWT =
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIxMjM0NTY3ODkwIiwibmFtZSI6IlJlYWN0IE1lZXR1cCEiLCJpYXQiOjE1MTYyMzkwMjJ9.ySWrOPI9ciFrY9BEaXxuRG3ajqQajr6bUSO4MUjm5Gk";
+
+      ProductsExperience.hydrate(
+        document.getElementById("microfrontend-products"),
+        { jwt: sampleJWT }
+      );
+    </script>
+  </body>
+</html>

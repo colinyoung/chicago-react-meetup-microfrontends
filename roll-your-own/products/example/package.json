@@ -1,0 +1,14 @@
+{
+  "name": "products-microfrontend-example",
+  "version": "1.0.0",
+  "description": "HTML Example. Start with npm start.",
+  "main": "index.js",
+  "scripts": {
+    "start": "serve ."
+  },
+  "author": "Colin Young",
+  "license": "MIT",
+  "dependencies": {
+    "serve": "^14.2.1"
+  }
+}

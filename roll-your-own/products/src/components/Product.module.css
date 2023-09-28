@@ -1,0 +1,33 @@
+.product {
+  border-radius: 3px;
+  padding: 10px 20px;
+  border: 1px solid #ddd;
+  margin-bottom: 10px;
+  max-width: 400px;
+}
+
+.productDetails img {
+  width: 50px;
+}
+
+.product:hover {
+    background-color: lightblue;
+    border-color: transparent;
+    cursor: pointer;
+}
+
+.productDetails {
+    min-height: 30px;
+}
+
+.productTitle {
+  font-weight: bold;
+}
+
+.priceCut {
+  color: red;
+}
+
+.productPrice s {
+  color: #666;
+}
