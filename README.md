@@ -37,7 +37,7 @@ cd single-spa/root-config; npm run start
 
 - [ ] The BFF is a Node.js server that serves up the API and the microfrontend. It's not a microfrontend itself, but its types are in Typescript. If you update its openapi spec, you can regenerate them with `npm run build-types` in `roll-your-own/products`.
 - [ ] It's possible to include other microfrontends from root-configs - see the `single-spa/root-config`'s import map for an example.
-- [ ] I changed the ProductsExperience microfrontend to be installed via a [.hydrate()](./roll-your-own/products/src/ProductsExperience.tsx) function, so that's how you'd bootstrap stuff.
+- [ ] I changed the ProductsExperience microfrontend to be installed via a [.hydrate()](https://github.com/colinyoung/chicago-react-meetup-microfrontends/blob/584ca4005818afbcacac7394dbed596391ff0283/roll-your-own/products/src/ProductsExperience.tsx#L11) function, so that's how you'd bootstrap stuff.
 
 ### TODOS
 
