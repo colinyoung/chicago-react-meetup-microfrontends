@@ -12,7 +12,7 @@ Published for my 'Experiences not Microfrontends' talk, Chicago React Meetup, Se
 
 ## To Run
 
-1. Start the BFF/API server using the readme in [bffs/products](./bff/products). (There's only one microfrontend right now, Products, so there's also only one BFF.)
+1. Start the BFF/API server using the readme in [bffs/products](./bffs/products). (There's only one microfrontend right now, Products, so there's also only one BFF.)
 2. Figure out which sample you want to use, and run it using the readmes in [single-spa](./single-spa/) or [roll-your-own](./roll-your-own/).
 
 ## Quickstart
