@@ -6,7 +6,7 @@ import { Root as ProductsExperienceRoot } from "./Root";
 import { ProductsExperienceProps } from "./types";
 
 // ProductsExperience will NOT automatically be rendered!
-// You must call ProductsExperience.install(div) to render it.
+// You must call ProductsExperience.hydrate(yourDOMNode) to render it.
 export const ProductsExperience = {
   hydrate: (node: HTMLElement, hydrateFromProps: ProductsExperienceProps) => {
     const root = createRoot(node);
