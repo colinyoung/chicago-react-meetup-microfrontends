@@ -2,6 +2,12 @@
 
 Published for my 'Experiences not Microfrontends' talk, Chicago React Meetup, September 2023.
 
+## Slides
+
+- [PDF slides](./Microfrontends%20and%20their%20BFFs%20-%20Colin%20Young.pdf)
+- [Powerpoint](./Microfrontends%20and%20their%20BFFs%20-%20Colin%20Young.pptx)
+- [Keynote source](./Microfrontends%20and%20their%20BFFs%20-%20Colin%20Young.key)
+
 ## To Run
 
 1. Start the BFF/API server using the readme in [bffs/products](./bff/products). (There's only one microfrontend right now, Products, so there's also only one BFF.)
@@ -28,7 +34,8 @@ cd single-spa/root-config; npm run start
 ### Check it out
 
 - [] The BFF is a Node.js server that serves up the API and the microfrontend. It's not a microfrontend itself, but its types are in Typescript. If you update its openapi spec, you can regenerate them with `npm run build-types` in `roll-your-own/products`.
-- [] It's possible to include
+- [] It's possible to include other microfrontends from root-configs - see the `single-spa/root-config`'s import map for an example.
+- [] I changed the ProductsExperience microfrontend to be installed via a [.hydrate()](./roll-your-own/products/src/ProductsExperience.tsx) function, so that's how you'd bootstrap stuff.
 
 ### TODOS
 
