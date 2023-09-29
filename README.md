@@ -2,7 +2,7 @@
 
 Published for my 'Experiences not Microfrontends' talk, Chicago React Meetup, September 2023.
 
-<img width="648" alt="Experiences Not Microfrontends talk introduction slide" src="https://github.com/colinyoung/chicago-react-meetup-microfrontends/assets/173257/e2410298-d0f2-41e5-a65c-532f505bb930">
+<a href="https://github.com/colinyoung/chicago-react-meetup-microfrontends/blob/main/Microfrontends%20and%20their%20BFFs%20-%20Colin%20Young.pdf"><img width="648" alt="Experiences Not Microfrontends talk introduction slide" src="https://github.com/colinyoung/chicago-react-meetup-microfrontends/assets/173257/e2410298-d0f2-41e5-a65c-532f505bb930"></a>
 
 ## Slides
 
