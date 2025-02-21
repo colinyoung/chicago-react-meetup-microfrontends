@@ -1,4 +1,8 @@
-## Code for my &ldquo;Experiences, Not Apps&rdquo; talk at the Chicago React Meetup, September 2023
+## Update
+
+>  I gave an updated version of this talk at [Mintel](https://mintel.com/) in Chicago in February 2025. Updated slides can be found here in [PDF](./Microfrontends%20and%20their%20BFFs%20-%202025%20-Colin%20Young.key), [PPTX](./Microfrontends%20and%20their%20BFFs%20-%202025%20-Colin%20Young.key), and [Keynote](./Microfrontends%20and%20their%20BFFs%20-%202025%20-Colin%20Young.key) formats.
+
+## Code for my &ldquo;Experiences, Not Apps&rdquo; talk at the Chicago React Meetup, September 2023 (EDIT: See updated slides above)
 
 [Jump to code](#to-run)
 
